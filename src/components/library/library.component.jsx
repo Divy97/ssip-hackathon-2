@@ -1,8 +1,7 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { data } from "../../data";
 
 import "./library.styles.css";
-
 const Library = () => {
   const [items, setItems] = useState(data);
 
@@ -13,7 +12,6 @@ const Library = () => {
 
     setItems(updateItems);
   };
-
   return (
     <>
       <section className="eBook_section">
@@ -26,7 +24,7 @@ const Library = () => {
           Read any Book!
         </h1>
 
-        {/* <div
+        <div
           className="menu-tabs container"
           style={{
             marginTop: "2rem",
@@ -63,62 +61,6 @@ const Library = () => {
           >
             Psychology
           </button>
-        </div> */}
-        <div class="section">
-          <div class="container">
-            <div class="grid-row">
-              <div class="grid-item">
-                <span>
-                  <button
-                    className="eBook_button"
-                    onClick={() => filterMenu("Computer_Science")}
-                  >
-                    Computer Science
-                  </button>
-                </span>
-              </div>
-              <div class="grid-item">
-                <span>
-                  <button
-                    className="eBook_button"
-                    onClick={() => filterMenu("Social_Science")}
-                  >
-                    Social Science
-                  </button>
-                </span>
-              </div>
-              <div class="grid-item">
-                <span>
-                  <button
-                    className="eBook_button"
-                    onClick={() => filterMenu("Psychology")}
-                  >
-                    Psychology
-                  </button>
-                </span>{" "}
-              </div>
-              <div class="grid-item">
-                <span>
-                  <button
-                    className="eBook_button"
-                    onClick={() => filterMenu("Biology")}
-                  >
-                    Biology
-                  </button>
-                </span>{" "}
-              </div>
-              <div class="grid-item">
-                <span>
-                  <button
-                    className="eBook_button"
-                    onClick={() => filterMenu("Accounts")}
-                  >
-                    Accounts
-                  </button>
-                </span>{" "}
-              </div>
-            </div>
-          </div>
         </div>
         <div className="menu-items container-fluid mt-5">
           <div className="row">
@@ -127,12 +69,28 @@ const Library = () => {
                 {items.map((elem) => {
                   const { id, name, image, review } = elem;
                   return (
-                    <div className="grid-item" key={id}>
-                      <span>
-                        <h3>{name}</h3>
-                        <p>Review: {review}</p>
-                      </span>{" "}
-                      <img src={image} height="200px" width="200px" />
+                    <div
+                      className="Item1 col-12 col-md-6 col-lg-6 vol-xl-4 my-5"
+                      key={id}
+                    >
+                      <div className="row Item-inside">
+                        {/*only for image */}
+                        <div className="col-12 col-md-12 col-lg-4 img-div">
+                          <img
+                            src={image}
+                            alt="menu-img"
+                            className="image-fluid"
+                          />
+                        </div>
+                        {/*only the rest of the data */}
+                        <div className="col-12 col-md-12 col-lg-8">
+                          <div className="main-title pt-4 pb-3">
+                            <h4 className="eBook_h4">{name}</h4>
+                            <p>Review : {review}/5</p>
+                            {/* <p>{description}</p> */}
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   );
                 })}

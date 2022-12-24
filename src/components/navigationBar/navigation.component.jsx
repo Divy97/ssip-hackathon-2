@@ -7,7 +7,9 @@ const NavigationBar = () => {
       <header>
         <div className="nav-wrapper">
           <div className="logo-container">
-            <Link to="/home">The Gap</Link>
+            <Link className="link" to="/home">
+              The Gap
+            </Link>
           </div>
           <nav>
             <input className="hidden" type="checkbox" id="menuToggle" />
@@ -19,22 +21,32 @@ const NavigationBar = () => {
             <div className="nav-container">
               <ul className="nav-tabs">
                 <li className="nav-tab">
-                  <Link to="/home">Home</Link>
+                  <Link className="link" to="/home">
+                    Home
+                  </Link>
                 </li>
                 <li className="nav-tab">
-                  <Link to="attendance">Attendance</Link>
+                  <Link className="link" to="attendance">
+                    Attendance
+                  </Link>
                 </li>
                 <li className="nav-tab">
-                  <Link to="/result">Result</Link>
+                  <Link className="link" to="/result">
+                    Result
+                  </Link>
                 </li>
                 <li className="nav-tab">
-                  <Link to="/library">Library</Link>
+                  <Link className="link" to="/library">
+                    Library
+                  </Link>
                 </li>
                 <li className="nav-tab">
-                  <Link to="/community">Community</Link>
+                  <Link className="link" to="/community">
+                    Community
+                  </Link>
                 </li>
                 <li className="nav-tab">
-                  <Link to="/profile">
+                  <Link className="link" to="/profile">
                     <img
                       src="https://img.freepik.com/free-photo/portrait-white-man-isolated_53876-40306.jpg"
                       alt="profile_photo"
