@@ -1,0 +1,61 @@
+.eBook_h4 {
+  margin-top: 0;
+  font-family: sans-serif;
+  font-size: 2rem;
+}
+
+.eBook_button {
+  width: 8.5rem;
+  height: 4rem;
+  margin-left: 6rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: #fff;
+}
+
+.eBook_button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--primary);
+}
+.section {
+  padding: 70px 30px;
+}
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+.grid-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 350px));
+  grid-gap: 15px 15px;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.grid-row .grid-item span {
+  padding: 10px;
+  line-height: 1;
+}
+.grid-row .grid-item h3 {
+  font-size: 20px;
+  margin-bottom: 0;
+}
+.grid-row .grid-item:hover {
+  filter: contrast(0.7);
+}
+.grid-row .grid-item {
+  transition: filter 0.5s ease;
+  display: flex;
+  cursor: pointer;
+
+  text-align: center;
+  font-family: sans-serif;
+  flex-direction: column-reverse;
+  align-items: stretch;
+}
